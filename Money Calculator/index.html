@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #8e44ad, #3498db);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .note-input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+      padding: 8px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .note-input label {
+      font-weight: bold;
+      color: #34495e;
+    }
+
+    .note-input input {
+      width: 100px;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #27ae60;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #219150;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    p {
+      margin-top: 10px;
+      font-style: italic;
+      color: #141616;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💵 Money Calculator</h1>
+
+    <div class="note-input">
+      <label>₹500:</label>
+      <input type="number" id="moneyInput" placeholder="0">
+    </div>
+
+    <div class="note-input">
+      <label>₹200:</label>
+      <input type="number" id="moneyInput2" placeholder="0">
+    </div>
+
+    <div class="note-input">
+      <label>₹100:</label>
+      <input type="number" id="moneyInput3" placeholder="0">
+    </div>
+
+    <div class="note-input">
+      <label>₹50:</label>
+      <input type="number" id="moneyInput4" placeholder="0">
+    </div>
+
+    <div class="note-input">
+      <label>₹20:</label>
+      <input type="number" id="moneyInput5" placeholder="0">
+    </div>
+
+    <div class="note-input">
+      <label>₹10:</label>
+      <input type="number" id="moneyInput6" placeholder="0">
+    </div>
+
+    <button onclick="calculateTotal()">💰 Calculate Total</button>
+    <h2 id="result"></h2>
+    <p>Dhanam Moolam Idam Jagath...💵</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
